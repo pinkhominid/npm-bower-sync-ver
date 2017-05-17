@@ -1,0 +1,14 @@
+{
+  "name": "npm-bower-sync-ver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "npm-bower-sync-ver.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "author": "John Ericson",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^10.0.2"
+  }
+}
