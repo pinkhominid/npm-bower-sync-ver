@@ -7,18 +7,18 @@ Node.js CLI to synchronize the versions in package.json and bower.json using pac
 Install
 
 ```shell
-npm i --save-dev npm-bower-sync-version
+npm i -D npm-bower-sync-version
 ```
 
-Then add the following line to package.json scripts property
+Then add the following line to your package.json scripts property object
 
 ```json
-"version": "npm-bower-sync-version"
+  "version": "npm-bower-sync-version && git add bower.json"
 ```
 
 ## Usage
 
-From that point you can use npm to update version and it will automatically update bower.json before the commit and tag.
+Now you can use npm to bump version and it will automatically update bower.json before the commit and tag.
 
 ```shell
 npm version minor
