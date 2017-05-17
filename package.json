@@ -4,12 +4,17 @@
   "description": "",
   "main": "npm-bower-sync-ver.js",
   "scripts": {
-    "test": "standard"
+    "test": "standard",
+    "preversion": "npm test",
+    "postversion": "git push --follow-tags && npm publish"
   },
   "bin": "./npm-bower-sync-ver.js",
   "author": "John Ericson",
   "license": "ISC",
   "devDependencies": {
     "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
   }
 }
