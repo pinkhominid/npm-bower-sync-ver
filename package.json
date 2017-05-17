@@ -11,6 +11,17 @@
   "bin": "./npm-bower-sync-ver.js",
   "author": "John Ericson",
   "license": "ISC",
+  "keywords": [
+    "npm",
+    "bower",
+    "sync",
+    "synchronize",
+    "version",
+    "node",
+    "cli",
+    "nodejs",
+    "package"
+  ],
   "devDependencies": {
     "standard": "^10.0.2"
   },
