@@ -1,6 +1,6 @@
 # Npm Bower Sync Version
 
-Node.js CLI to synchronize the versions in package.json and bower.json using package.json as the source of truth. Bower deprecated the use of the version property but it is still required by some artifact repositories like JFrog's Artifactory.
+Simple Node.js CLI to synchronize the version in package.json and bower.json using package.json as the source of truth. Bower deprecated the use of the version property but it is still required by some artifact repositories like JFrog's Artifactory.
 
 ## Setup
 
