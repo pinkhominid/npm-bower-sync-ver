@@ -6,6 +6,7 @@
   "scripts": {
     "test": "standard"
   },
+  "bin": "./npm-bower-sync-ver.js",
   "author": "John Ericson",
   "license": "ISC",
   "devDependencies": {
