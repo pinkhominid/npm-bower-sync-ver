@@ -3,14 +3,23 @@
   "version": "1.0.4",
   "description": "",
   "main": "npm-bower-sync-ver.js",
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
+  "devDependencies": {
+    "standard": "^10.0.2"
+  },
   "scripts": {
     "test": "standard",
     "preversion": "npm test",
     "postversion": "git push --follow-tags && npm publish"
   },
   "bin": "./npm-bower-sync-ver.js",
-  "author": "John Ericson",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pinkhominid/npm-bower-sync-ver.git"
+  },
+  "homepage": "https://github.com/pinkhominid/npm-bower-sync-ver",
   "keywords": [
     "npm",
     "bower",
@@ -22,10 +31,8 @@
     "nodejs",
     "package"
   ],
-  "devDependencies": {
-    "standard": "^10.0.2"
+  "author": {
+    "name": "pinkhominid"
   },
-  "dependencies": {
-    "commander": "^2.9.0"
-  }
+  "license": "ISC"
 }
