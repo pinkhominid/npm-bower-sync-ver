@@ -1,8 +1,7 @@
 {
   "name": "npm-bower-sync-ver",
   "version": "1.0.7",
-  "description": "Simple Node.js CLI to synchronize the version in package.json and bower.json using package.json as the source of truth.",
-  "main": "npm-bower-sync-ver.js",
+  "description": "Simple Node.js CLI to synchronize the version property in package.json and bower.json using package.json as the source of truth.",
   "dependencies": {
     "commander": "^2.9.0"
   },
@@ -14,12 +13,14 @@
     "preversion": "npm test",
     "postversion": "git push --follow-tags && npm publish"
   },
+  "main": "npm-bower-sync-ver.js",
   "bin": "./npm-bower-sync-ver.js",
+  "bugs": "https://github.com/pinkhominid/npm-bower-sync-ver/issues",
+  "homepage": "https://github.com/pinkhominid/npm-bower-sync-ver",
   "repository": {
     "type": "git",
     "url": "git://github.com/pinkhominid/npm-bower-sync-ver.git"
   },
-  "homepage": "https://github.com/pinkhominid/npm-bower-sync-ver",
   "keywords": [
     "npm",
     "bower",
@@ -31,8 +32,6 @@
     "nodejs",
     "package"
   ],
-  "author": {
-    "name": "pinkhominid"
-  },
+  "author": "pinkhominid <pinkhominid@birdbomb.com>",
   "license": "ISC"
 }
