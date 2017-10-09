@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 const program = require('commander')
-const meta = require(`${process.cwd()}/package.json`)
+const meta = require('./package.json')
 const path = require('path')
 
 const DEFAULT_FILE_PATHS = [ './bower.json' ]
