@@ -1,6 +1,6 @@
 {
   "name": "npm-bower-sync-ver",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple Node.js CLI to synchronize the version property in package.json and bower.json using package.json as the source of truth.",
   "dependencies": {
     "commander": "^2.9.0"
