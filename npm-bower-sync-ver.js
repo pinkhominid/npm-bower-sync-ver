@@ -2,7 +2,8 @@
 
 const fs = require('fs')
 const program = require('commander')
-const meta = require('./package.json')
+const libPkg = require('./package.json')
+const pkg = require(`${process.cwd()}/package.json`)
 const path = require('path')
 
 const DEFAULT_FILE_PATHS = [ './bower.json' ]
@@ -25,10 +26,11 @@ function updateVersion (file, ver) {
 }
 
 try {
-  let ver = meta.version
+  // default ver
+  let ver = pkg.version
 
   program
-    .version(meta.version)
+    .version(libPkg.version)
     .option('-f, --file [file]', 'The target file to sync. Defaults to bower.json', collect, DEFAULT_FILE_PATHS)
     .arguments('<version>')
     .action(v => { ver = v })
