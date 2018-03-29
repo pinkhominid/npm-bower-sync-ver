@@ -13,7 +13,7 @@ npm i -D npm-bower-sync-ver
 Then add the version line to your package.json scripts property object
 
 ```js
-  "script": {
+  "scripts": {
 
     "version": "npm-bower-sync-ver && git add bower.json"
 
