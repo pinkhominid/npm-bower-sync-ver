@@ -6,7 +6,8 @@ const libPkg = require('./package.json')
 const pkg = require(`${process.cwd()}/package.json`)
 const path = require('path')
 
-const DEFAULT_FILE_PATHS = [ './bower.json' ]
+const defaultFiles = [ './bower.json' ]
+const verPtn = /(.*"version"\s*:\s*")[^"]*(".*)/
 
 function collect (val, memo) {
   memo.push(val)
@@ -17,7 +18,6 @@ function updateVersion (file, ver) {
   const resolved = path.resolve(file)
 
   let fileStr = fs.readFileSync(resolved, 'utf-8')
-  const verPtn = /(.*"version"\s*:\s*")[^"]*(".*)/
 
   if (verPtn.test(fileStr)) {
     fileStr = fileStr.replace(verPtn, '$1' + ver + '$2')
@@ -31,12 +31,14 @@ try {
 
   program
     .version(libPkg.version)
-    .option('-f, --file [file]', 'The target file to sync. Defaults to bower.json', collect, DEFAULT_FILE_PATHS)
+    .option('-f, --file [file]', 'target file to sync (default bower.json)', collect, [])
     .arguments('<version>')
     .action(v => { ver = v })
     .parse(process.argv)
 
   if (ver) {
+    if (!program.file.length) program.file = defaultFiles
+
     program.file.forEach(
       file => updateVersion(file, ver)
     )
